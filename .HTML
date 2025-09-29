@@ -1,0 +1,1714 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Islamic Information - Hussain Akhtar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Roboto:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f8f8;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: #1a1a1a;
+            color: #fff;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-family: 'Cinzel', serif;
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-decoration: none;
+            color: #fff;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 1.5rem;
+        }
+        
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: #d4af37;
+        }
+        
+        /* Hero Section */
+        .hero {
+            height: 70vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://picsum.photos/seed/islamic-hero/1920/1080.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            margin-top: 60px;
+        }
+        
+        .hero-content h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            letter-spacing: 3px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        .hero-content p {
+            font-size: 1.2rem;
+            max-width: 800px;
+        }
+        
+        /* Section Styles */
+        section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-family: 'Cinzel', serif;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #1a1a1a;
+            position: relative;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: #d4af37;
+        }
+        
+        /* Notice Board Styles */
+        .notice-board {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 40px;
+            margin-bottom: 60px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .notice-board h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            margin-bottom: 30px;
+            color: #1a1a1a;
+            text-align: center;
+            position: relative;
+        }
+        
+        .notice-board h2:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background-color: #d4af37;
+        }
+        
+        .notices {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .notice-item {
+            background-color: #f8f8f8;
+            border-left: 4px solid #d4af37;
+            padding: 20px;
+            border-radius: 0 8px 8px 0;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .notice-item:hover {
+            transform: translateX(10px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .notice-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .notice-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            color: #1a1a1a;
+        }
+        
+        .notice-date {
+            font-size: 0.9rem;
+            color: #666;
+            background-color: #e0e0e0;
+            padding: 5px 10px;
+            border-radius: 20px;
+        }
+        
+        .notice-content {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        .notice-tag {
+            display: inline-block;
+            background-color: #d4af37;
+            color: #1a1a1a;
+            padding: 3px 10px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            margin-top: 10px;
+        }
+        
+        .add-notice {
+            background-color: #1a1a1a;
+            color: #fff;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-top: 30px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .add-notice:hover {
+            background-color: #333;
+        }
+        
+        /* Hussain Name Gallery */
+        .hussain-name-gallery {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 40px;
+            margin-bottom: 60px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .hussain-name-gallery h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            margin-bottom: 30px;
+            color: #1a1a1a;
+            text-align: center;
+            position: relative;
+        }
+        
+        .hussain-name-gallery h2:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background-color: #d4af37;
+        }
+        
+        .upload-section {
+            background-color: #f8f8f8;
+            border-radius: 8px;
+            padding: 30px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .upload-section h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: #1a1a1a;
+        }
+        
+        .upload-area {
+            border: 2px dashed #d4af37;
+            border-radius: 8px;
+            padding: 40px;
+            margin: 20px 0;
+            background-color: #fafafa;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .upload-area:hover {
+            background-color: #f0f0f0;
+            border-color: #b8941f;
+        }
+        
+        .upload-area i {
+            font-size: 3rem;
+            color: #d4af37;
+            margin-bottom: 15px;
+        }
+        
+        .upload-area p {
+            font-size: 1.1rem;
+            color: #666;
+        }
+        
+        .upload-btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: #d4af37;
+            color: #1a1a1a;
+            text-decoration: none;
+            font-weight: 700;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            font-size: 1.1rem;
+            margin-top: 20px;
+        }
+        
+        .upload-btn:hover {
+            background-color: #b8941f;
+        }
+        
+        .hussain-photos {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        
+        .hussain-photo-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: transform 0.3s;
+            min-height: 200px;
+            background-color: #f8f8f8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .hussain-photo-item:hover {
+            transform: scale(1.05);
+        }
+        
+        .hussain-photo-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .hussain-photo-item .placeholder {
+            text-align: center;
+            color: #999;
+        }
+        
+        .hussain-photo-item .placeholder i {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+        
+        .hussain-photo-item .placeholder p {
+            font-size: 1rem;
+        }
+        
+        .hussain-photo-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            padding: 10px;
+            transform: translateY(100%);
+            transition: transform 0.3s;
+        }
+        
+        .hussain-photo-item:hover .hussain-photo-caption {
+            transform: translateY(0);
+        }
+        
+        .delete-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: rgba(255, 0, 0, 0.7);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+            display: none;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .hussain-photo-item:hover .delete-btn {
+            display: flex;
+        }
+        
+        /* Family Poem Section */
+        .family-poem {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 40px;
+            margin-bottom: 60px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .family-poem h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            margin-bottom: 30px;
+            color: #1a1a1a;
+            text-align: center;
+            position: relative;
+        }
+        
+        .family-poem h2:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background-color: #d4af37;
+        }
+        
+        .poem-content {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            line-height: 1.8;
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+        }
+        
+        .poem-content p {
+            margin-bottom: 15px;
+        }
+        
+        .family-photos {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        
+        .family-photo-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: transform 0.3s;
+            min-height: 200px;
+            background-color: #f8f8f8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .family-photo-item:hover {
+            transform: scale(1.05);
+        }
+        
+        .family-photo-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .family-photo-item .placeholder {
+            text-align: center;
+            color: #999;
+        }
+        
+        .family-photo-item .placeholder i {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+        
+        .family-photo-item .placeholder p {
+            font-size: 1rem;
+        }
+        
+        .family-photo-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            padding: 10px;
+            transform: translateY(100%);
+            transition: transform 0.3s;
+        }
+        
+        .family-photo-item:hover .family-photo-caption {
+            transform: translateY(0);
+        }
+        
+        /* Personal Information Section */
+        .personal-info {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 40px;
+            margin-bottom: 60px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .personal-info h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            margin-bottom: 30px;
+            color: #1a1a1a;
+            text-align: center;
+            position: relative;
+        }
+        
+        .personal-info h2:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background-color: #d4af37;
+        }
+        
+        .personal-info-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+        
+        .profile-image {
+            flex: 1 1 300px;
+            text-align: center;
+        }
+        
+        .profile-image img {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        
+        .profile-image img:hover {
+            transform: scale(1.05);
+        }
+        
+        .profile-details {
+            flex: 2 1 400px;
+        }
+        
+        .profile-details h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: #1a1a1a;
+        }
+        
+        .profile-details p {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        .info-box {
+            background-color: #f8f8f8;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .info-box h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: #d4af37;
+        }
+        
+        .info-box ul {
+            list-style: none;
+        }
+        
+        .info-box ul li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .info-box ul li i {
+            margin-right: 10px;
+            color: #d4af37;
+        }
+        
+        /* Islamic Knowledge Cards */
+        .islamic-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+        
+        .islamic-card {
+            background-color: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        
+        .islamic-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .islamic-card-header {
+            background-color: #1a1a1a;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .islamic-card-header h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .islamic-card-body {
+            padding: 25px;
+        }
+        
+        .islamic-card-body p {
+            margin-bottom: 15px;
+            font-size: 1rem;
+        }
+        
+        .islamic-card-body ul {
+            list-style: none;
+            margin-left: 10px;
+        }
+        
+        .islamic-card-body ul li {
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 20px;
+        }
+        
+        .islamic-card-body ul li:before {
+            content: "•";
+            color: #d4af37;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        
+        .islamic-card-body a {
+            color: #d4af37;
+            text-decoration: none;
+            font-weight: 700;
+            transition: color 0.3s;
+        }
+        
+        .islamic-card-body a:hover {
+            color: #b8941f;
+        }
+        
+        /* Featured Content */
+        .featured-content {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 40px;
+            margin-bottom: 60px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .featured-content h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: #1a1a1a;
+        }
+        
+        .featured-content p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+        
+        /* Quote Section */
+        .quote-section {
+            background-color: #f8f8f8;
+            border-radius: 10px;
+            padding: 40px;
+            margin-bottom: 60px;
+            text-align: center;
+        }
+        
+        .quote {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-style: italic;
+            color: #1a1a1a;
+            margin-bottom: 20px;
+            position: relative;
+            padding: 0 30px;
+        }
+        
+        .quote:before {
+            content: """;
+            font-size: 3rem;
+            color: #d4af37;
+            position: absolute;
+            left: 0;
+            top: -20px;
+        }
+        
+        .quote:after {
+            content: """;
+            font-size: 3rem;
+            color: #d4af37;
+            position: absolute;
+            right: 0;
+            bottom: -40px;
+        }
+        
+        .quote-author {
+            font-weight: 700;
+            color: #d4af37;
+        }
+        
+        /* Resources Grid */
+        .resources-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .resource-item {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        
+        .resource-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .resource-item h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: #1a1a1a;
+        }
+        
+        .resource-item p {
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+            color: #666;
+        }
+        
+        .resource-item a {
+            color: #d4af37;
+            text-decoration: none;
+            font-weight: 700;
+            transition: color 0.3s;
+        }
+        
+        .resource-item a:hover {
+            color: #b8941f;
+        }
+        
+        /* Editable Content */
+        .editable {
+            border: 1px dashed transparent;
+            padding: 5px;
+            cursor: pointer;
+            position: relative;
+        }
+        
+        .editable:hover {
+            border-color: #d4af37;
+            background-color: rgba(212, 175, 55, 0.1);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #1a1a1a;
+            color: #fff;
+            padding: 40px 0;
+            text-align: center;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .social-links {
+            margin: 20px 0;
+        }
+        
+        .social-links a {
+            color: #fff;
+            font-size: 1.5rem;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+        
+        .social-links a:hover {
+            color: #d4af37;
+        }
+        
+        /* Modal for adding notices */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .modal-content {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 600px;
+            position: relative;
+        }
+        
+        .close-modal {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #999;
+        }
+        
+        .close-modal:hover {
+            color: #333;
+        }
+        
+        .modal h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: #1a1a1a;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 700;
+            color: #333;
+        }
+        
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: 'Roboto', sans-serif;
+            font-size: 1rem;
+        }
+        
+        .form-group textarea {
+            height: 120px;
+            resize: vertical;
+        }
+        
+        .submit-btn {
+            background-color: #d4af37;
+            color: #1a1a1a;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .submit-btn:hover {
+            background-color: #b8941f;
+        }
+        
+        /* Lightbox for photos */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            z-index: 3000;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .lightbox-content {
+            max-width: 90%;
+            max-height: 90%;
+            position: relative;
+        }
+        
+        .lightbox-content img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        
+        .close-lightbox {
+            position: absolute;
+            top: -40px;
+            right: 0;
+            color: #fff;
+            font-size: 40px;
+            cursor: pointer;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+            }
+            
+            nav ul {
+                margin-top: 1rem;
+            }
+            
+            nav ul li {
+                margin: 0 1rem;
+            }
+            
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+            
+            .islamic-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .hussain-photos, .family-photos {
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            }
+            
+            .personal-info-content {
+                flex-direction: column;
+            }
+            
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <a href="index.html" class="logo">Hussain Akhtar</a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="personal-info.html">Personal</a></li>
+                    <li><a href="gallery.html">Photo Gallery</a></li>
+                    <li><a href="islamic-info.html">Islamic Info</a></li>
+                    <li><a href="extra-info.html">Extra Info</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <section class="hero">
+        <div class="hero-content">
+            <h1>ISLAMIC INFORMATION</h1>
+            <p>Explore a wealth of Islamic knowledge, teachings, and resources for spiritual growth and understanding</p>
+        </div>
+    </section>
+    
+    <section id="islamic-info">
+        <div class="container">
+            <!-- Notice Board Section -->
+            <div class="notice-board">
+                <h2><i class="fas fa-bullhorn"></i> Islamic Notice Board</h2>
+                <div class="notices" id="noticesContainer">
+                    <!-- Notices will be dynamically added here -->
+                </div>
+                <button class="add-notice" id="addNoticeBtn">
+                    <i class="fas fa-plus"></i> Add New Notice
+                </button>
+            </div>
+            
+            <!-- Hussain Name Gallery -->
+            <div class="hussain-name-gallery">
+                <h2><i class="fas fa-images"></i> Hussain Name Gallery</h2>
+                
+                <div class="upload-section">
+                    <h3>Upload Photos Related to Hussain</h3>
+                    <div class="upload-area" id="uploadArea">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                        <p>Drag and drop your photos here or click to browse</p>
+                        <input type="file" id="fileInput" multiple accept="image/*" style="display: none;">
+                    </div>
+                    <button class="upload-btn" id="uploadBtn">Select Photos</button>
+                    <p style="margin-top: 15px; font-size: 0.9rem; color: #666;">You can upload up to 30 photos</p>
+                </div>
+                
+                <div class="hussain-photos" id="hussainPhotos">
+                    <!-- Hussain photos will be dynamically added here -->
+                </div>
+            </div>
+            
+            <!-- Family Poem Section -->
+            <div class="family-poem">
+                <h2><i class="fas fa-book-open"></i> Family Poem</h2>
+                
+                <div class="poem-content">
+                    <p>Darul Huda stands with knowledge bright,</p>
+                    <p>Hussain Akhtar shines with guiding light.</p>
+                    <p>Nizamuddin, a Hafiz, pure and wise,</p>
+                    <p>Nargis Begum's love lights up the skies.</p>
+                    <p>Zainul Abedin, brave and true,</p>
+                    <p>Zaya Fatimah brings joy in view.</p>
+                    <p>Together they inspire with faith and grace,</p>
+                    <p>Leaving a blessed mark in every place.</p>
+                </div>
+                
+                <h3 style="font-family: 'Playfair Display', serif; font-size: 1.5rem; margin-bottom: 20px; color: #1a1a1a; text-align: center;">Family Photos</h3>
+                
+                <div class="family-photos" id="familyPhotos">
+                    <!-- Family photos will be dynamically added here -->
+                </div>
+            </div>
+            
+            <!-- Personal Information Section -->
+            <div class="personal-info">
+                <h2><i class="fas fa-user"></i> Personal Information</h2>
+                
+                <div class="personal-info-content">
+                    <div class="profile-image">
+                        <img src="https://picsum.photos/seed/hussain-profile/400/600.jpg" alt="Profile Image" id="profileImage">
+                    </div>
+                    
+                    <div class="profile-details">
+                        <h3 class="editable" id="profileName">Hussain Akhtar</h3>
+                        <p class="editable" id="profileBio">Islamic scholar and photographer dedicated to preserving Islamic heritage and knowledge through visual documentation and educational outreach.</p>
+                        
+                        <div class="info-grid">
+                            <div class="info-box">
+                                <h4>Contact Information</h4>
+                                <ul>
+                                    <li><i class="fas fa-envelope"></i> <span class="editable" id="contactEmail">hussainakhtar1547@gmail.com</span></li>
+                                    <li><i class="fas fa-phone"></i> <span class="editable" id="contactPhone">9793892983</span></li>
+                                    <li><i class="fas fa-map-marker-alt"></i> <span class="editable" id="contactAddress">Islamabad, Pakistan</span></li>
+                                </ul>
+                            </div>
+                            
+                            <div class="info-box">
+                                <h4>Background</h4>
+                                <ul>
+                                    <li><i class="fas fa-graduation-cap"></i> <span class="editable" id="education">Islamic Studies, Al-Azhar University</span></li>
+                                    <li><i class="fas fa-briefcase"></i> <span class="editable" id="profession">Islamic Scholar & Photographer</span></li>
+                                    <li><i class="fas fa-calendar-alt"></i> <span class="editable" id="experience">15+ years of experience</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <h2 class="section-title">Islamic Knowledge Center</h2>
+            
+            <div class="islamic-grid">
+                <div class="islamic-card">
+                    <div class="islamic-card-header">
+                        <h3><i class="fas fa-book"></i> Quranic Studies</h3>
+                    </div>
+                    <div class="islamic-card-body">
+                        <p class="editable" id="quranic-desc">Deep dive into the Holy Quran with comprehensive studies, translations, and tafsir.</p>
+                        <ul>
+                            <li class="editable" id="quranic-item1">Complete Quran with translations</li>
+                            <li class="editable" id="quranic-item2">Surah-by-surah analysis</li>
+                            <li class="editable" id="quranic-item3">Memorization techniques</li>
+                            <li class="editable" id="quranic-item4">Tafsir Ibn Kathir</li>
+                        </ul>
+                        <a href="#">Explore Quranic Studies <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="islamic-card">
+                    <div class="islamic-card-header">
+                        <h3><i class="fas fa-mosque"></i> Hadith Collection</h3>
+                    </div>
+                    <div class="islamic-card-body">
+                        <p class="editable" id="hadith-desc">Access authentic collections of Hadith from Sahih Bukhari, Muslim, and other major sources.</p>
+                        <ul>
+                            <li class="editable" id="hadith-item1">Sahih Al-Bukhari</li>
+                            <li class="editable" id="hadith-item2">Sahih Muslim</li>
+                            <li class="editable" id="hadith-item3">40 Hadith Nawawi</li>
+                            <li class="editable" id="hadith-item4">Riyad us-Saliheen</li>
+                        </ul>
+                        <a href="#">Browse Hadith Collection <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="islamic-card">
+                    <div class="islamic-card-header">
+                        <h3><i class="fas fa-pray"></i> Prayer Guide</h3>
+                    </div>
+                    <div class="islamic-card-body">
+                        <p class="editable" id="prayer-desc">Learn the proper way to perform Salah with step-by-step instructions and audio guides.</p>
+                        <ul>
+                            <li class="editable" id="prayer-item1">Five daily prayers</li>
+                            <li class="editable" id="prayer-item2">Jummah prayer</li>
+                            <li class="editable" id="prayer-item3">Eid prayers</li>
+                            <li class="editable" id="prayer-item4">Tahajjud prayer</li>
+                        </ul>
+                        <a href="#">Prayer Guide <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="islamic-card">
+                    <div class="islamic-card-header">
+                        <h3><i class="fas fa-calendar-alt"></i> Islamic Calendar</h3>
+                    </div>
+                    <div class="islamic-card-body">
+                        <p class="editable" id="calendar-desc">Stay updated with important Islamic dates, events, and celebrations throughout the year.</p>
+                        <ul>
+                            <li class="editable" id="calendar-item1">Hijri calendar</li>
+                            <li class="editable" id="calendar-item2">Important Islamic dates</li>
+                            <li class="editable" id="calendar-item3">Prayer times</li>
+                            <li class="editable" id="calendar-item4">Qibla direction</li>
+                        </ul>
+                        <a href="#">Islamic Calendar <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="islamic-card">
+                    <div class="islamic-card-header">
+                        <h3><i class="fas fa-graduation-cap"></i> Islamic Education</h3>
+                    </div>
+                    <div class="islamic-card-body">
+                        <p class="editable" id="education-desc">Comprehensive courses and resources for Islamic learning at all levels.</p>
+                        <ul>
+                            <li class="editable" id="edu-item1">Beginner's guide to Islam</li>
+                            <li class="editable" id="edu-item2">Fiqh (Islamic jurisprudence)</li>
+                            <li class="editable" id="edu-item3">Aqeedah (Islamic creed)</li>
+                            <li class="editable" id="edu-item4">Tasawwuf (Spirituality)</li>
+                        </ul>
+                        <a href="#">Islamic Courses <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="islamic-card">
+                    <div class="islamic-card-header">
+                        <h3><i class="fas fa-heart"></i> Islamic Values</h3>
+                    </div>
+                    <div class="islamic-card-body">
+                        <p class="editable" id="values-desc">Learn about the core Islamic values and principles that guide a Muslim's life.</p>
+                        <ul>
+                            <li class="editable" id="values-item1">Taqwa (God-consciousness)</li>
+                            <li class="editable" id="values-item2">Ikhlas (Sincerity)</li>
+                            <li class="editable" id="values-item3">Tawakkul (Trust in Allah)</li>
+                            <li class="editable" id="values-item4">Zuhd (Piety)</li>
+                        </ul>
+                        <a href="#">Islamic Values <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="featured-content">
+                <h3 class="editable" id="featured-title">Featured Article: The Five Pillars of Islam</h3>
+                <p class="editable" id="featured-content1">The Five Pillars of Islam are the foundation of a Muslim's faith and practice. They represent the core beliefs and duties that every Muslim must fulfill in their lifetime. These pillars include the declaration of faith (Shahada), prayer (Salat), almsgiving (Zakat), fasting during Ramadan (Sawm), and pilgrimage to Mecca (Hajj) for those who are able.</p>
+                <p class="editable" id="featured-content2">Each pillar serves to strengthen the bond between the individual and Allah, as well as foster community and social responsibility. By adhering to these pillars, Muslims demonstrate their commitment to their faith and their submission to the will of Allah.</p>
+                <a href="#">Read More About the Five Pillars <i class="fas fa-arrow-right"></i></a>
+            </div>
+            
+            <div class="quote-section">
+                <p class="quote editable" id="quote-text">The best among you are those who learn the Quran and teach it.</p>
+                <p class="quote-author editable" id="quote-author">- Prophet Muhammad (PBUH)</p>
+            </div>
+            
+            <h2 class="section-title">Islamic Resources</h2>
+            <div class="resources-grid">
+                <div class="resource-item">
+                    <h4 class="editable" id="resource1-title">Islamic Books</h4>
+                    <p class="editable" id="resource1-desc">Download and read a collection of Islamic books, including classics and contemporary works.</p>
+                    <a href="#">Browse Books <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="resource-item">
+                    <h4 class="editable" id="resource2-title">Audio Lectures</h4>
+                    <p class="editable" id="resource2-desc">Listen to inspiring lectures and talks from renowned Islamic scholars and speakers.</p>
+                    <a href="#">Listen Now <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="resource-item">
+                    <h4 class="editable" id="resource3-title">Islamic Videos</h4>
+                    <p class="editable" id="resource3-desc">Watch educational and inspirational videos on various Islamic topics and teachings.</p>
+                    <a href="#">Watch Videos <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="resource-item">
+                    <h4 class="editable" id="resource4-title">Islamic Apps</h4>
+                    <p class="editable" id="resource4-desc">Discover useful mobile applications for Quran, prayer times, Islamic learning, and more.</p>
+                    <a href="#">Download Apps <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="resource-item">
+                    <h4 class="editable" id="resource5-title">Islamic Articles</h4>
+                    <p class="editable" id="resource5-desc">Read thought-provoking articles on Islamic topics, contemporary issues, and spirituality.</p>
+                    <a href="#">Read Articles <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="resource-item">
+                    <h4 class="editable" id="resource6-title">Islamic Events</h4>
+                    <p class="editable" id="resource6-desc">Stay informed about Islamic conferences, seminars, and events happening worldwide.</p>
+                    <a href="#">View Events <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Modal for adding notices -->
+    <div class="modal" id="noticeModal">
+        <div class="modal-content">
+            <span class="close-modal" id="closeModal">&times;</span>
+            <h3>Add New Notice</h3>
+            <form id="noticeForm">
+                <div class="form-group">
+                    <label for="noticeTitle">Notice Title</label>
+                    <input type="text" id="noticeTitle" required>
+                </div>
+                <div class="form-group">
+                    <label for="noticeDate">Date</label>
+                    <input type="date" id="noticeDate" required>
+                </div>
+                <div class="form-group">
+                    <label for="noticeContent">Content</label>
+                    <textarea id="noticeContent" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="noticeTag">Category</label>
+                    <select id="noticeTag" required>
+                        <option value="">Select Category</option>
+                        <option value="Ramadan">Ramadan</option>
+                        <option value="Eid">Eid</option>
+                        <option value="Education">Education</option>
+                        <option value="Events">Events</option>
+                        <option value="Charity">Charity</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <button type="submit" class="submit-btn">Submit Notice</button>
+            </form>
+        </div>
+    </div>
+    
+    <!-- Lightbox for photos -->
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-content">
+            <span class="close-lightbox">&times;</span>
+            <img id="lightbox-img" src="" alt="">
+        </div>
+    </div>
+    
+    <footer>
+        <div class="container footer-content">
+            <h3>Hussain Akhtar Official Website</h3>
+            <p>&copy; 2023 All rights reserved</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // Notice Board Functionality
+        const addNoticeBtn = document.getElementById('addNoticeBtn');
+        const noticeModal = document.getElementById('noticeModal');
+        const closeModal = document.getElementById('closeModal');
+        const noticeForm = document.getElementById('noticeForm');
+        const noticesContainer = document.getElementById('noticesContainer');
+        
+        // Load saved notices from localStorage
+        function loadSavedNotices() {
+            const savedNotices = JSON.parse(localStorage.getItem('islamicNotices') || '[]');
+            noticesContainer.innerHTML = '';
+            
+            savedNotices.forEach(notice => {
+                const noticeItem = document.createElement('div');
+                noticeItem.className = 'notice-item';
+                noticeItem.innerHTML = `
+                    <div class="notice-header">
+                        <h3 class="notice-title">${notice.title}</h3>
+                        <span class="notice-date">${notice.date}</span>
+                    </div>
+                    <div class="notice-content">
+                        <p>${notice.content}</p>
+                        <span class="notice-tag">${notice.tag}</span>
+                    </div>
+                `;
+                noticesContainer.appendChild(noticeItem);
+            });
+            
+            // If no notices exist, add default ones
+            if (savedNotices.length === 0) {
+                const defaultNotices = [
+                    {
+                        title: 'Ramadan 2023 Timings',
+                        date: 'Mar 23, 2023',
+                        content: 'Iftar timings for the holy month of Ramadan. Please check your local masjid for accurate timings. Remember to increase your good deeds during this blessed month.',
+                        tag: 'Ramadan'
+                    },
+                    {
+                        title: 'Eid al-Fitr Announcement',
+                        date: 'Apr 20, 2023',
+                        content: 'Eid prayers will be held at the Central Mosque at 8:00 AM. Community celebration will follow at the community center. All are welcome to join in the festivities.',
+                        tag: 'Eid'
+                    },
+                    {
+                        title: 'New Islamic Studies Course',
+                        date: 'May 5, 2023',
+                        content: 'Registration is open for our new Islamic Studies course starting June 1st. Topics include Quranic tafsir, Hadith studies, and Fiqh principles.',
+                        tag: 'Education'
+                    }
+                ];
+                
+                defaultNotices.forEach(notice => {
+                    const noticeItem = document.createElement('div');
+                    noticeItem.className = 'notice-item';
+                    noticeItem.innerHTML = `
+                        <div class="notice-header">
+                            <h3 class="notice-title">${notice.title}</h3>
+                            <span class="notice-date">${notice.date}</span>
+                        </div>
+                        <div class="notice-content">
+                            <p>${notice.content}</p>
+                            <span class="notice-tag">${notice.tag}</span>
+                        </div>
+                    `;
+                    noticesContainer.appendChild(noticeItem);
+                });
+                
+                // Save default notices
+                localStorage.setItem('islamicNotices', JSON.stringify(defaultNotices));
+            }
+        }
+        
+        // Initialize notices
+        loadSavedNotices();
+        
+        // Open modal
+        addNoticeBtn.addEventListener('click', () => {
+            noticeModal.style.display = 'flex';
+        });
+        
+        // Close modal
+        closeModal.addEventListener('click', () => {
+            noticeModal.style.display = 'none';
+        });
+        
+        window.addEventListener('click', (e) => {
+            if (e.target === noticeModal) {
+                noticeModal.style.display = 'none';
+            }
+        });
+        
+        // Submit new notice
+        noticeForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const title = document.getElementById('noticeTitle').value;
+            const date = document.getElementById('noticeDate').value;
+            const content = document.getElementById('noticeContent').value;
+            const tag = document.getElementById('noticeTag').value;
+            
+            // Format date
+            const formattedDate = new Date(date).toLocaleDateString('en-US', {
+                year: 'numeric',
+                month: 'short',
+                day: 'numeric'
+            });
+            
+            // Create new notice object
+            const newNotice = {
+                title: title,
+                date: formattedDate,
+                content: content,
+                tag: tag
+            };
+            
+            // Get existing notices and add the new one
+            const savedNotices = JSON.parse(localStorage.getItem('islamicNotices') || '[]');
+            savedNotices.unshift(newNotice); // Add to the beginning
+            localStorage.setItem('islamicNotices', JSON.stringify(savedNotices));
+            
+            // Reload notices
+            loadSavedNotices();
+            
+            // Reset form and close modal
+            noticeForm.reset();
+            noticeModal.style.display = 'none';
+        });
+        
+        // Hussain Name Gallery Functionality
+        const hussainPhotos = document.getElementById('hussainPhotos');
+        const uploadArea = document.getElementById('uploadArea');
+        const fileInput = document.getElementById('fileInput');
+        const uploadBtn = document.getElementById('uploadBtn');
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const closeLightbox = document.querySelector('.close-lightbox');
+        
+        // Load saved photos from localStorage
+        function loadSavedHussainPhotos() {
+            const savedPhotos = JSON.parse(localStorage.getItem('hussainPhotos') || '[]');
+            
+            // Initialize gallery with placeholders
+            for (let i = 1; i <= 30; i++) {
+                const photoItem = document.createElement('div');
+                photoItem.className = 'hussain-photo-item';
+                
+                if (savedPhotos[i-1]) {
+                    photoItem.innerHTML = `
+                        <img src="${savedPhotos[i-1].src}" alt="${savedPhotos[i-1].name}">
+                        <div class="hussain-photo-caption">${savedPhotos[i-1].name}</div>
+                        <button class="delete-btn" onclick="deleteHussainPhoto(${i-1})"><i class="fas fa-trash"></i></button>
+                    `;
+                } else {
+                    photoItem.innerHTML = `
+                        <div class="placeholder">
+                            <i class="fas fa-image"></i>
+                            <p>Photo ${i}</p>
+                        </div>
+                        <div class="hussain-photo-caption">Photo ${i}</div>
+                        <button class="delete-btn" onclick="deleteHussainPhoto(${i-1})"><i class="fas fa-trash"></i></button>
+                    `;
+                }
+                
+                hussainPhotos.appendChild(photoItem);
+            }
+        }
+        
+        // Initialize gallery
+        loadSavedHussainPhotos();
+        
+        // Upload functionality
+        uploadBtn.addEventListener('click', () => {
+            fileInput.click();
+        });
+        
+        uploadArea.addEventListener('click', () => {
+            fileInput.click();
+        });
+        
+        uploadArea.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            uploadArea.style.backgroundColor = '#f0f0f0';
+        });
+        
+        uploadArea.addEventListener('dragleave', () => {
+            uploadArea.style.backgroundColor = '#fafafa';
+        });
+        
+        uploadArea.addEventListener('drop', (e) => {
+            e.preventDefault();
+            uploadArea.style.backgroundColor = '#fafafa';
+            handleFiles(e.dataTransfer.files, 'hussain');
+        });
+        
+        fileInput.addEventListener('change', (e) => {
+            handleFiles(e.target.files, 'hussain');
+        });
+        
+        function handleFiles(files, galleryType) {
+            const savedPhotos = JSON.parse(localStorage.getItem(`${galleryType}Photos`) || '[]');
+            const photoItems = document.getElementById(`${galleryType}Photos`).querySelectorAll(`.${galleryType}-photo-item`);
+            const emptySlots = Array.from(photoItems).filter(item => 
+                item.querySelector('.placeholder')
+            );
+            
+            for (let i = 0; i < files.length && i < emptySlots.length; i++) {
+                const file = files[i];
+                const reader = new FileReader();
+                
+                reader.onload = (e) => {
+                    const slotIndex = Array.from(photoItems).indexOf(emptySlots[i]);
+                    savedPhotos[slotIndex] = {
+                        src: e.target.result,
+                        name: file.name
+                    };
+                    
+                    localStorage.setItem(`${galleryType}Photos`, JSON.stringify(savedPhotos));
+                    
+                    const slot = emptySlots[i];
+                    slot.innerHTML = `
+                        <img src="${e.target.result}" alt="${file.name}">
+                        <div class="${galleryType}-photo-caption">${file.name}</div>
+                        <button class="delete-btn" onclick="delete${galleryType.charAt(0).toUpperCase() + galleryType.slice(1)}Photo(${slotIndex})"><i class="fas fa-trash"></i></button>
+                    `;
+                };
+                
+                reader.readAsDataURL(file);
+            }
+        }
+        
+        function deleteHussainPhoto(index) {
+            const savedPhotos = JSON.parse(localStorage.getItem('hussainPhotos') || '[]');
+            savedPhotos[index] = null;
+            localStorage.setItem('hussainPhotos', JSON.stringify(savedPhotos));
+            
+            location.reload(); // Reload to update the gallery
+        }
+        
+        // Family Photos Gallery
+        const familyPhotos = document.getElementById('familyPhotos');
+        
+        // Load saved family photos from localStorage
+        function loadSavedFamilyPhotos() {
+            const savedPhotos = JSON.parse(localStorage.getItem('familyPhotos') || '[]');
+            
+            // Initialize gallery with placeholders
+            for (let i = 1; i <= 30; i++) {
+                const photoItem = document.createElement('div');
+                photoItem.className = 'family-photo-item';
+                
+                if (savedPhotos[i-1]) {
+                    photoItem.innerHTML = `
+                        <img src="${savedPhotos[i-1].src}" alt="${savedPhotos[i-1].name}">
+                        <div class="family-photo-caption">${savedPhotos[i-1].name}</div>
+                        <button class="delete-btn" onclick="deleteFamilyPhoto(${i-1})"><i class="fas fa-trash"></i></button>
+                    `;
+                } else {
+                    photoItem.innerHTML = `
+                        <div class="placeholder">
+                            <i class="fas fa-image"></i>
+                            <p>Family Photo ${i}</p>
+                        </div>
+                        <div class="family-photo-caption">Family Photo ${i}</div>
+                        <button class="delete-btn" onclick="deleteFamilyPhoto(${i-1})"><i class="fas fa-trash"></i></button>
+                    `;
+                }
+                
+                familyPhotos.appendChild(photoItem);
+            }
+        }
+        
+        // Initialize family gallery
+        loadSavedFamilyPhotos();
+        
+        // Family photo upload functionality
+        const familyUploadArea = document.getElementById('familyUploadArea');
+        const familyFileInput = document.getElementById('familyFileInput');
+        const familyUploadBtn = document.getElementById('familyUploadBtn');
+        
+        familyUploadBtn.addEventListener('click', () => {
+            familyFileInput.click();
+        });
+        
+        familyUploadArea.addEventListener('click', () => {
+            familyFileInput.click();
+        });
+        
+        familyUploadArea.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            familyUploadArea.style.backgroundColor = '#f0f0f0';
+        });
+        
+        familyUploadArea.addEventListener('dragleave', () => {
+            familyUploadArea.style.backgroundColor = '#fafafa';
+        });
+        
+        familyUploadArea.addEventListener('drop', (e) => {
+            e.preventDefault();
+            familyUploadArea.style.backgroundColor = '#fafafa';
+            handleFiles(e.dataTransfer.files, 'family');
+        });
+        
+        familyFileInput.addEventListener('change', (e) => {
+            handleFiles(e.target.files, 'family');
+        });
+        
+        function deleteFamilyPhoto(index) {
+            const savedPhotos = JSON.parse(localStorage.getItem('familyPhotos') || '[]');
+            savedPhotos[index] = null;
+            localStorage.setItem('familyPhotos', JSON.stringify(savedPhotos));
+            
+            location.reload(); // Reload to update the gallery
+        }
+        
+        // Lightbox functionality
+        document.addEventListener('click', (e) => {
+            if (e.target.tagName === 'IMG' && 
+                (e.target.parentElement.classList.contains('hussain-photo-item') || 
+                 e.target.parentElement.classList.contains('family-photo-item'))) {
+                lightbox.style.display = 'flex';
+                lightboxImg.src = e.target.src;
+                lightboxImg.alt = e.target.alt;
+            }
+        });
+        
+        closeLightbox.addEventListener('click', () => {
+            lightbox.style.display = 'none';
+        });
+        
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                lightbox.style.display = 'none';
+            }
+        });
+        
+        // Profile image upload
+        const profileImage = document.getElementById('profileImage');
+        profileImage.addEventListener('click', function() {
+            const input = document.createElement('input');
+            input.type = 'file';
+            input.accept = 'image/*';
+            
+            input.addEventListener('change', function() {
+                const file = this.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        profileImage.src = e.target.result;
+                        localStorage.setItem('profileImage', e.target.result);
+                    };
+                    reader.readAsDataURL(file);
+                }
+            });
+            
+            input.click();
+        });
+        
+        // Load saved profile image
+        const savedProfileImage = localStorage.getItem('profileImage');
+        if (savedProfileImage) {
+            profileImage.src = savedProfileImage;
+        }
+        
+        // Editable content functionality
+        document.querySelectorAll('.editable').forEach(element => {
+            element.addEventListener('click', function() {
+                const currentText = this.textContent.trim();
+                const newText = prompt('Edit content:', currentText);
+                
+                if (newText !== null && newText !== currentText) {
+                    this.textContent = newText;
+                    // Save to localStorage for persistence
+                    localStorage.setItem(this.id, newText);
+                }
+            });
+        });
+        
+        // Load saved content
+        function loadSavedContent() {
+            const savedElements = document.querySelectorAll('.editable');
+            savedElements.forEach(element => {
+                const savedContent = localStorage.getItem(element.id);
+                if (savedContent) {
+                    element.textContent = savedContent;
+                }
+            });
+        }
+        
+        // Initialize saved content
+        loadSavedContent();
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
